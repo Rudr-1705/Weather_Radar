@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("");
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.black {
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+
+.input-fields {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+.input-fields input,
+button {
+    padding: 10px;
+    outline: none;
+    font-size: 0.9375rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid black;
+}
+
+.input-fields input {
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.input-fields button {
+    border-radius: 20px;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.coordinates {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 15px 0;
+}
+
+.lat,
+.lon {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.lat p,
+.lon p {
+    font-size: 1.1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.last_updated {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 5px
+}
+
+.info {
+    flex-direction: column;
+    gap: 12px;
+}
+
+.property,
+.temp_tab,
+.feels_tab {
+    gap: 5px;
+    flex-direction: row;
+}
+
+.temp_tab .scale-select {
+    position: relative;
+    left: 35px;
+}
+
+.feels_tab .scale-select {
+    position: relative;
+    left: 57px;
+}
+
+.ans_field_condition {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.condition-icon {
+    z-index: 2;
+    background-image: url("");
+    filter: drop-shadow(2px 2px 3px black);
+    background-position: center;
+    background-size: cover;
+    color: black;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    left: 165%;
+    bottom: 0.01%;
+}
+
+.info .property p {
+    font-weight: 550;
+}
+
+.loader {
+    visibility: hidden;
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border: 10px solid grey;
+    border-bottom: 10px solid black;
+    border-radius: 50%;
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    z-index: 10;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.blurscreen {
+    position: absolute;
+    visibility: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Radar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="black"></div>
+    <div class="container">
+        <h1>Weather Radar</h1>
+        <div class="input-fields">
+            <input type="text" value="New Delhi" spellcheck="false" />
+            <button class="submit">Get Weather Data</button>
+        </div>
+        <div class="coordinates">
+            <div class="lat">
+                <h3>Latitude : </h3>
+                <p></p>
+            </div>
+            <div class="lon">
+                <h3>Longitude : </h3>
+                <p></p>
+            </div>
+        </div>
+        <div class="last_updated flex">
+            <h4>Last Updated on : </h4>
+            <p></p>
+        </div>
+        <div class="info flex">
+            <div class="property flex">
+                <p class="time">Local Time : </p>
+                <div class="ans_field_time"></div>
+            </div>
+            <div class="property flex">
+                <p class="condition">Condition : </p>
+                <div class="ans_field_condition">
+                    <div class="text_condition"></div>
+                    <div class="condition-icon"></div>
+                </div>
+            </div>
+            <div class="property flex">
+                <div class="temp_tab flex">
+                    <p class="temp">Temperature : </p>
+                    <div class="ans_field_temp"></div>
+                    <div class="scale-select">
+                        <input type="radio" value="Cel" name="scale_temp" checked>&deg;C
+                        <input type="radio" value="Far" name="scale_temp">&deg;F
+                    </div>
+                </div>
+            </div>
+            <div class="property flex">
+                <div class="feels_tab flex">
+                    <p class="Feels">Feels-like : </p>
+                    <div class="ans_field_feels"></div>
+                    <div class="scale-select">
+                        <input type="radio" value="Cel" name="scale_feels" checked>&deg;C
+                        <input type="radio" value="Far" name="scale_feels">&deg;F
+                    </div>
+                </div>
+            </div>
+            <div class="property flex">
+                <p class="humidity">Humidity : </p>
+                <div class="ans_field_humidity"></div>
+            </div>
+            <div class="property flex">
+                <p class="precipitation">Precipitation (mm) : </p>
+                <div class="ans_field_precipitation"></div>
+            </div>
+            <div class="property flex">
+                <p class="wind-mph">Wind-speed (mph) : </p>
+                <div class="ans_field_wind-mph"></div>
+            </div>
+            <div class="property flex">
+                <p class="wind-dir">Wind-direction : </p>
+                <div class="ans_field_wind-dir"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loader"></div>
+    <div class="blurscreen"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>
