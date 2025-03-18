@@ -38,6 +38,12 @@ const updateInfo = async () => {
     place = true_place;
     let URL_weather = `${BASE_URL_weather}${place}`;
     let response = await fetch(URL_weather);
+    if (!response.ok) {
+        alert("No place found.");
+        document.querySelector(".loader").style.visibility = 'hidden';
+        document.querySelector(".blurscreen").style.visibility = 'hidden';
+        return;
+    }
     let data = await response.json();
     condition_text.innerText = `${data.current.condition.text}`;
     condition_icon.style.backgroundImage = `url(${data.current.condition.icon})`
@@ -76,6 +82,12 @@ const updateBackground = async () => {
     place = true_place;
     let URL_background = `${BASE_URL_image}${place};`
     let response = await fetch(URL_background);
+    if (!response.ok) {
+        alert("No place found.");
+        document.querySelector(".loader").style.visibility = 'hidden';
+        document.querySelector(".blurscreen").style.visibility = 'hidden';
+        return;
+    }
     let data = await response.json();
     document.body.style.backgroundImage = `url(${data.results[0].urls.raw})`
 }
