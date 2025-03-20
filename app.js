@@ -1,4 +1,4 @@
-const BASE_URL_weather = `http://api.weatherapi.com/v1/current.json?key=e7abc30223c54bb2ac9140254251503&q=`
+const BASE_URL_weather = `https://api.weatherapi.com/v1/current.json?key=e7abc30223c54bb2ac9140254251503&q=`
 const BASE_URL_image = `https://api.unsplash.com/search/photos?per_page=1&client_id=zb6rCIOXddELXsNMgcVSmW5lY5ZUPcntipJ_41nKm2k&query=`
 
 let place_field = document.querySelector(".container input");
