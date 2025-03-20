@@ -89,7 +89,11 @@ const updateBackground = async () => {
         return;
     }
     let data = await response.json();
-    document.body.style.backgroundImage = `url(${data.results[0].urls.raw})`
+    if (data.results[0] && data.results[0].urls && data.results[0].urls.raw) {
+        document.body.style.backgroundImage = `url(${data.results[0].urls.raw})`;
+    } else {
+        return;
+    }
 }
 
 btn1.forEach((radio) => {
